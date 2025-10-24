@@ -56,7 +56,7 @@ class ClientPhotoSender():
                     s.sendall(self.__pack_message(intrinsics.tobytes()))
 
                     print("Sent intrinsics. Starting to send images...")
-                    while True:
+                    if True:
                         image = self.camera.capture_mat()
                         success, jpg = cv2.imencode('.jpg', image, [int(cv2.IMWRITE_JPEG_QUALITY), 100])
                         if not success:
@@ -65,7 +65,10 @@ class ClientPhotoSender():
                         img_bytes = jpg.tobytes()
                         s.sendall(self.__pack_message(img_bytes))
                         #print(f"Sent image ({len(img_bytes)} bytes)")
-                        self.result = self.__recv_message(s)
+                        data_bytes = self.__recv_message(s)
+                        arr = np.frombuffer(data_bytes, dtype=np.float32)
+                        self.result = arr.reshape(-1, 2).tolist()
+                        break
 
             except (ConnectionRefusedError, OSError):
                 print("Server not available. Retrying in 3 seconds...")

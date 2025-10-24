@@ -3057,7 +3057,7 @@ static const char __pyx_k_NoiseReductionMode[] = "NoiseReductionMode";
 static const char __pyx_k_asyncio_coroutines[] = "asyncio.coroutines";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_IMWRITE_JPEG_QUALITY[] = "IMWRITE_JPEG_QUALITY";
-static const char __pyx_k_camera_calibration_npz[] = "../camera_calibration.npz";
+static const char __pyx_k_camera_calibration_npz[] = "./camera_calibration.npz";
 static const char __pyx_k_initUndistortRectifyMap[] = "initUndistortRectifyMap";
 static const char __pyx_k_Drivers_RaspGSCamera_pyx[] = "Drivers/RaspGSCamera.pyx";
 static const char __pyx_k_RaspGSCamera_capture_mat[] = "RaspGSCamera.capture_mat";
@@ -5136,7 +5136,7 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
 /* "RaspGSCamera.pyx":21
  *     cdef bint started
  * 
- *     def __cinit__(self, int width=1456, int height=1088, const char* calib_file = b"../camera_calibration.npz"):             # <<<<<<<<<<<<<<
+ *     def __cinit__(self, int width=1456, int height=1088, const char* calib_file = b"./camera_calibration.npz"):             # <<<<<<<<<<<<<<
  *         # Minimal work here, real init in __init__ (to allow Python exceptions)
  *         self.width = width
 */
@@ -5216,7 +5216,7 @@ static int __pyx_pw_12RaspGSCamera_12RaspGSCamera_1__cinit__(PyObject *__pyx_v_s
     if (values[2]) {
       __pyx_v_calib_file = __Pyx_PyObject_AsString(values[2]); if (unlikely((!__pyx_v_calib_file) && PyErr_Occurred())) __PYX_ERR(0, 21, __pyx_L3_error)
     } else {
-      __pyx_v_calib_file = ((char const *)((char const *)"../camera_calibration.npz"));
+      __pyx_v_calib_file = ((char const *)((char const *)"./camera_calibration.npz"));
     }
   }
   goto __pyx_L6_skip;
@@ -5254,7 +5254,7 @@ static int __pyx_pf_12RaspGSCamera_12RaspGSCamera___cinit__(struct __pyx_obj_12R
   __Pyx_RefNannySetupContext("__cinit__", 0);
 
   /* "RaspGSCamera.pyx":23
- *     def __cinit__(self, int width=1456, int height=1088, const char* calib_file = b"../camera_calibration.npz"):
+ *     def __cinit__(self, int width=1456, int height=1088, const char* calib_file = b"./camera_calibration.npz"):
  *         # Minimal work here, real init in __init__ (to allow Python exceptions)
  *         self.width = width             # <<<<<<<<<<<<<<
  *         self.height = height
@@ -5350,7 +5350,7 @@ static int __pyx_pf_12RaspGSCamera_12RaspGSCamera___cinit__(struct __pyx_obj_12R
  *         self.map2 = None
  *         self.roi = (0, 0, width, height)             # <<<<<<<<<<<<<<
  * 
- *     def __init__(self, int width=1456, int height=1088, calib_file="../camera_calibration.npz"):
+ *     def __init__(self, int width=1456, int height=1088, calib_file="./camera_calibration.npz"):
 */
   __pyx_t_1 = __Pyx_PyLong_From_int(__pyx_v_width); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 31, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -5379,7 +5379,7 @@ static int __pyx_pf_12RaspGSCamera_12RaspGSCamera___cinit__(struct __pyx_obj_12R
   /* "RaspGSCamera.pyx":21
  *     cdef bint started
  * 
- *     def __cinit__(self, int width=1456, int height=1088, const char* calib_file = b"../camera_calibration.npz"):             # <<<<<<<<<<<<<<
+ *     def __cinit__(self, int width=1456, int height=1088, const char* calib_file = b"./camera_calibration.npz"):             # <<<<<<<<<<<<<<
  *         # Minimal work here, real init in __init__ (to allow Python exceptions)
  *         self.width = width
 */
@@ -5401,7 +5401,7 @@ static int __pyx_pf_12RaspGSCamera_12RaspGSCamera___cinit__(struct __pyx_obj_12R
 /* "RaspGSCamera.pyx":33
  *         self.roi = (0, 0, width, height)
  * 
- *     def __init__(self, int width=1456, int height=1088, calib_file="../camera_calibration.npz"):             # <<<<<<<<<<<<<<
+ *     def __init__(self, int width=1456, int height=1088, calib_file="./camera_calibration.npz"):             # <<<<<<<<<<<<<<
  *         # Keep Python-level initialization here (can raise)
  *         if not os.path.exists(calib_file):
 */
@@ -5533,7 +5533,7 @@ static int __pyx_pf_12RaspGSCamera_12RaspGSCamera_2__init__(struct __pyx_obj_12R
   __Pyx_RefNannySetupContext("__init__", 0);
 
   /* "RaspGSCamera.pyx":35
- *     def __init__(self, int width=1456, int height=1088, calib_file="../camera_calibration.npz"):
+ *     def __init__(self, int width=1456, int height=1088, calib_file="./camera_calibration.npz"):
  *         # Keep Python-level initialization here (can raise)
  *         if not os.path.exists(calib_file):             # <<<<<<<<<<<<<<
  *             raise FileNotFoundError(f"Calibration file not found: {calib_file}")
@@ -5590,7 +5590,7 @@ static int __pyx_pf_12RaspGSCamera_12RaspGSCamera_2__init__(struct __pyx_obj_12R
     __PYX_ERR(0, 36, __pyx_L1_error)
 
     /* "RaspGSCamera.pyx":35
- *     def __init__(self, int width=1456, int height=1088, calib_file="../camera_calibration.npz"):
+ *     def __init__(self, int width=1456, int height=1088, calib_file="./camera_calibration.npz"):
  *         # Keep Python-level initialization here (can raise)
  *         if not os.path.exists(calib_file):             # <<<<<<<<<<<<<<
  *             raise FileNotFoundError(f"Calibration file not found: {calib_file}")
@@ -6305,7 +6305,7 @@ static int __pyx_pf_12RaspGSCamera_12RaspGSCamera_2__init__(struct __pyx_obj_12R
   /* "RaspGSCamera.pyx":33
  *         self.roi = (0, 0, width, height)
  * 
- *     def __init__(self, int width=1456, int height=1088, calib_file="../camera_calibration.npz"):             # <<<<<<<<<<<<<<
+ *     def __init__(self, int width=1456, int height=1088, calib_file="./camera_calibration.npz"):             # <<<<<<<<<<<<<<
  *         # Keep Python-level initialization here (can raise)
  *         if not os.path.exists(calib_file):
 */
